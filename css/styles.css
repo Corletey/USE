@@ -1,25 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
 * {
-    margin: 0;
-    /* padding: 0;
+  margin: 0;
+  /* padding: 0;
     box-sizing: border-box; */
+}
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#particles-js {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  background-color: #fffdd0;
 }
 
 body {
-    font-family: Arial, sans-serif;
+  font-family: "roboto", sans-serif;
 }
 
 header {
-    background-color: #f8f9fa;
-    padding: 20px 0;
+  background-color: #f8f9fa;
+  padding: 20px 0;
 }
 
 .head-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 /* .logo a {
@@ -30,82 +48,241 @@ header {
 } */
 
 nav ul {
-    display: flex;
-    list-style: none;
+  display: flex;
+  list-style: none;
 }
 
 nav ul li {
-    margin-left: 20px;
-    /* margin-right: 20px; */
+  margin-left: 20px;
+  /* margin-right: 20px; */
 }
 
 nav ul li a {
-    text-decoration: none;
-    color: #333;
-    font-size: 1em;
-    transition: color 0.3s;
+  text-decoration: none;
+  color: #333;
+  font-size: 1em;
+  transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #007bff;
+  color: #007bff;
+}
+/* END OF HEADER SECTION  */
+
+#newhero {
+  background-image: url("../assets/images/hero.jpg");
+  height: 80vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
+.newhero-text {
+  text-align: center;
+  padding-top: 80px;
+  width: 40vw;
+}
 
+.newhero-text h1 {
+  text-align: left;
+  font-size: 50px;
+  color: #0a0a0a;
+  padding-left: 40px;
+}
+
+.newhero-text p {
+  padding-right: 60px;
+  font-size: 20px;
+  line-height: 1.4;
+  color: #ffffff;
+}
+
+.btn {
+  height: 30px;
+  width: 170px;
+  border: 1px solid;
+  border-radius: 5px;
+  background-color: #007bff;
+  margin: 20px 0 0 40px;
+  /* padding-left: 40px; */
+}
+.btn a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 18px;
+}
+
+/* HERO SECTION  */
 .hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    color: white;
-    padding: 40px 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 40px 20px;
+  background-color: #ff7f50;
 }
 
 .hero-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 10px;
-    width: 100%;
-    max-width: 1200px;
-    margin-bottom: 20px;
+  display: flex;
+  grid-template-columns: repeat(1fr);
+  gap: 30px;
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 20px;
+  z-index: 1000000;
 }
 
 .grid-item {
-    overflow: hidden;
-    border-radius: 10px;
+  overflow: hidden;
+  border-radius: 10px;
 }
 
 .grid-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .hero-content {
-    background: rgba(0, 0, 0, 0.5); /* Optional: for better text readability */
-    padding: 20px;
-    border-radius: 10px;
+  background: rgba(0, 0, 0, 0.5); /* Optional: for better text readability */
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 500px; /* Adjust the value as needed */
+  margin-left: 20px; /* Add some spacing between grid and content */
 }
 
 .hero h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
+  font-size: 2.5em;
+  margin-bottom: 20px;
 }
 
 .hero p {
-    font-size: 1.2em;
-    margin-bottom: 20px;
+  font-size: 1.2em;
+  margin-bottom: 20px;
 }
 
 .cta-button {
-    background-color: #FFD700; /* Bright Yellow */
-    color: #333;
-    padding: 10px 20px;
-    text-decoration: none;
-    font-size: 1em;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+  background-color: #ffd700; /* Bright Yellow */
+  color: #333;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 1em;
+  border-radius: 5px;
+  transition: background-color 0.3s;
 }
 
 .cta-button:hover {
-    background-color: #FFC107; /* Slightly darker yellow */
+  background-color: #ffc107; /* Slightly darker yellow */
+}
+
+/* about trial  */
+#first-content {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(225, 236, 247);
+}
+
+.inner-1 {
+  margin-left: 90px;
+}
+
+.inner-1 img {
+  margin-top: 70px;
+  width: 500px;
+  height: 90vh;
+  border-top-left-radius: 40%;
+}
+
+.inner-2 {
+  text-align: center;
+  padding-top: 200px;
+  margin-left: 30px;
+}
+
+.inner-2 h1 {
+  color: #2d0000;
+  font-size: 46px;
+  font-weight: 400;
+  line-height: 1.4;
+  margin-bottom: 30px;
+}
+
+.inner-2 h3 {
+  font-size: 24px;
+  font-weight: 400;
+  color: #2d0000;
+  line-height: 1.4;
+  font-family: "poppins";
+  text-align: left;
+  padding-bottom: 20px;
+}
+
+.inner-2 p {
+  font-size: 20px;
+  color: #6b5a5a;
+  font-weight: 300;
+  line-height: 1.8;
+  margin-bottom: 40px;
+  font-family: "poppins";
+  text-align: left;
+}
+
+.over {
+  /* position: absolute; */
+  width: 194px;
+  height: 80px;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  background: #e33232;
+  text-align: center;
+  margin-top: 500px;
+  margin-left: -120px;
+  border-radius: 2px;
+}
+
+.over p {
+  font-size: 20px;
+  text-transform: uppercase;
+  padding: 5px;
+  color: white;
+}
+
+
+/* Practice Area section  */
+.parea {
+  margin: 120px;
+}
+
+#famicon {
+  justify-content: center;
+  height: 100px;
+  width: 100px;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  /* background-color: #2196F3; */
+  padding: 10px;
+  gap:10px;
+  height: 100vh;
+}
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+  
+}
+.grid-item-3{
+grid-column: 3;
+grid-row: 1 / span 2;
+ background-color: rgba(255, 255, 255, 0.8);
+ border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+  border-top-right-radius: 50%;
+}
